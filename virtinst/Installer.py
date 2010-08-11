@@ -393,7 +393,7 @@ class Installer(object):
                                           emulator=domain.emulator,
                                           arch=guest.arch)
             gobj.loader = domain.loader
-        elif self.os_type == "openvz":
+        if self.type == "openvz":
             gobj = virtinst.FullVirtGuest(installer=self,
                                           connection=self.conn,
                                           emulator=domain.emulator,
