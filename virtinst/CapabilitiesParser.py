@@ -236,7 +236,7 @@ class Guest(object):
             # Picking last in list so we favour KVM/KQEMU over QEMU
             return self.domains[-1]
         else:
-            priority = ["kvm", "xen", "kqemu", "qemu"]
+            priority = ["kvm", "xen", "kqemu", "qemu", "openvz"]
             if not accelerated:
                 priority.reverse()
 
